@@ -1,12 +1,8 @@
-from enum import Enum
-
-class Instrument(Enum):
+class Instrument:
   drums = 1
   guitar = 2
   bass = 3
   other = 4
 
-class InstrumentMenu(self):
-	str instrumentSelection = "Drums Bass\nGuitar Other"
-	Instrument selected = Instrument.drums
-	#TODO
+class InstrumentMenu():
+	instrumentSelection = "Drums Bass\nGuitar Other"
