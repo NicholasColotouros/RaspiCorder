@@ -2,6 +2,7 @@
 
 from time import sleep
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
+from RaspiCorder import *
 
 #Initialization of the plate
 lcd = Adafruit_CharLCDPlate.Adafruit_CharLCDPlate()
