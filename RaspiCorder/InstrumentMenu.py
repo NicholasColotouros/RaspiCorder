@@ -24,9 +24,9 @@ class InstrumentMenu():
 		elif self.selected == Instrument.guitar:
 			lcd.setCursor(1,0)
 		elif self.selected == Instrument.bass:
-			lcd.setCursor(0, 5)
+			lcd.setCursor(0, 9)
 		else:
-			lcd.setCursor(1,5)
+			lcd.setCursor(1,9)
 
 	def getInstrumentInput(self, lcd):
 		lcd.clear()
@@ -35,8 +35,9 @@ class InstrumentMenu():
 
 		while True:
 			self.updateCursor(lcd)
+			
 			# Move left
-		    if lcd.buttonPressed(lcd.LEFT):
+			if lcd.buttonPressed(lcd.LEFT):
 		    	if self.selected == Instrument.bass:
 		    		self.selected = Instrument.drums
 		    		sleep(self.delayTime)
@@ -49,7 +50,7 @@ class InstrumentMenu():
 		    # Move right
 		    elif lcd.buttonPressed(lcd.RIGHT):
 		    	if self.selected == Instrument.drums:
-		    		self.selected = Instrument.guitar
+		    		self.selected = Instrument.bass
 		    		sleep(self.delayTime)
 
 		    	elif self.selected == Instrument.guitar:
