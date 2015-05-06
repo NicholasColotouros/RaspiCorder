@@ -13,4 +13,4 @@ sleep(2)
 lcd.clear()
 
 x = InstrumentMenu.InstrumentMenu()
-#getInstrumentInput(x, lcd)
+InstrumentMenu.getInstrumentInput(x, lcd)
