@@ -19,10 +19,14 @@ class InstrumentMenu():
 		delayTime = 0.5
 
 	def updateCursor(self, lcd):
-		if self.selected = 1:
+		if self.selected == Instrument.drums:
 			lcd.setCursor(0,0)
-		elif self.selected = 2:
+		elif self.selected == Instrument.guitar:
 			lcd.setCursor(1,0)
+		elif self.selected == Instrument.bass:
+			lcd.setCursor(0, 5)
+		else:
+			lcd.setCursor(1,5)
 
 	def getInstrumentInput(self, lcd):
 		lcd.clear()
