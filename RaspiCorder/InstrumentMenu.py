@@ -10,7 +10,7 @@ class Instrument:
   other = 4
 
 class InstrumentMenu():
-	instrumentSelection = "Drums     Bass\nGuitar    Other"
+	instrumentSelection = " Drums     Bass\n Guitar    Other"
 	selected = 1
 	delayTime = 0.5      # The time it takes to look for another button press
 
@@ -59,11 +59,23 @@ class InstrumentMenu():
 		    
 			# Move up
 			elif lcd.buttonPressed(lcd.UP):
+				if self.selected == Instrument.guitar:
+					self.selected = Instrument.drums
+		        	sleep(self.delayTime)
+
+		        elif self.selected == Instrument.other:
+		        	self.selected = Instrument.bass
 		        	sleep(self.delayTime)
 
 			# Move down
 			elif lcd.buttonPressed(lcd.DOWN):
-		    		sleep(self.delayTime)
+				if self.selected == Instrument.drums:
+					self.selected = Instrument.guitar
+		        	sleep(self.delayTime)
+
+		        elif self.selected == Instrument.bass:
+		        	self.selected = Instrument.other
+		        	sleep(self.delayTime)				
 
 			# Select the current entry
 			elif lcd.buttonPressed(lcd.SELECT):
