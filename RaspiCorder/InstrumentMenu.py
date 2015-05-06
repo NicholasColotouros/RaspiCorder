@@ -34,25 +34,25 @@ class InstrumentMenu():
 		lcd.blink()
 		lcd.setCursor(0,0)
 
-	"""	while True:
+	while True:
 		    # Move left
 		    if lcd.buttonPressed(lcd.LEFT):
-		    	if self.selected = Instrument.bass:
+		    	if self.selected == Instrument.bass:
 		    		self.selected = Instrument.drums
 		    		sleep(delayTime)
 
-		    	elif self.selected = Instrument.other:
+		    	elif self.selected == Instrument.other:
 		    		self.selected = Instrument.guitar
 		    		sleep(delayTime)
 
 		         
 		    # Move right
 		    elif lcd.buttonPressed(lcd.RIGHT):
-		    	if self.selected = Instrument.drums:
+		    	if self.selected == Instrument.drums:
 		    		self.selected = Instrument.guitar
 		    		sleep(delayTime)
 
-		    	elif self.selected = selected.guitar:
+		    	elif self.selected == selected.guitar:
 		    		self.selected = Instrument.other
 		    		sleep(delayTime)
 		    
@@ -67,4 +67,4 @@ class InstrumentMenu():
 		    # Select the current entry
 		    elif lcd.buttonPressed(lcd.SELECT):
 		    	lcd.blink()
-		    	return selected"""
+		    	return selected
