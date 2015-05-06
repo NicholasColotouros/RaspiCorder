@@ -12,5 +12,5 @@ lcd.message("  Introducing\n  RaspiCorder")
 sleep(2)
 lcd.clear()
 
-x = InstrumentMenu()
+x = RaspiCorder.InstrumentMenu()
 getInstrumentInput(x, lcd)
