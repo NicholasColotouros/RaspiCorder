@@ -38,34 +38,34 @@ class InstrumentMenu():
 			
 			# Move left
 			if lcd.buttonPressed(lcd.LEFT):
-		    	if self.selected == Instrument.bass:
-		    		self.selected = Instrument.drums
-		    		sleep(self.delayTime)
+		    		if self.selected == Instrument.bass:
+		    			self.selected = Instrument.drums
+			    		sleep(self.delayTime)
 
-		    	elif self.selected == Instrument.other:
-		    		self.selected = Instrument.guitar
-		    		sleep(self.delayTime)
+			    	elif self.selected == Instrument.other:
+			    		self.selected = Instrument.guitar
+		    			sleep(self.delayTime)
 
 		         
-		    # Move right
-		    elif lcd.buttonPressed(lcd.RIGHT):
-		    	if self.selected == Instrument.drums:
-		    		self.selected = Instrument.bass
-		    		sleep(self.delayTime)
+			# Move right
+			elif lcd.buttonPressed(lcd.RIGHT):
+		    		if self.selected == Instrument.drums:
+		    			self.selected = Instrument.bass
+			    		sleep(self.delayTime)
 
-		    	elif self.selected == Instrument.guitar:
-		    		self.selected = Instrument.other
-		    		sleep(self.delayTime)
+			    	elif self.selected == Instrument.guitar:
+			    		self.selected = Instrument.other
+		    			sleep(self.delayTime)
 		    
-		    # Move up
-		    elif lcd.buttonPressed(lcd.UP):
-		        sleep(self.delayTime)
+			# Move up
+			elif lcd.buttonPressed(lcd.UP):
+		        	sleep(self.delayTime)
 
-		    # Move down
-		    elif lcd.buttonPressed(lcd.DOWN):
-		    	sleep(self.delayTime)
+			# Move down
+			elif lcd.buttonPressed(lcd.DOWN):
+		    		sleep(self.delayTime)
 
-		    # Select the current entry
-		    elif lcd.buttonPressed(lcd.SELECT):
-		    	lcd.blink()
-		    	return selected
+			# Select the current entry
+			elif lcd.buttonPressed(lcd.SELECT):
+		    		lcd.blink()
+		    	return self.selected
