@@ -10,7 +10,7 @@ class Instrument:
   other = 4
 
 class InstrumentMenu():
-	instrumentSelection = "Drums Bass\nGuitar Other"
+	instrumentSelection = "Drums     Bass\nGuitar    Other"
 	selected = 1
 	delayTime = 0.5      # The time it takes to look for another button press
 
@@ -18,10 +18,17 @@ class InstrumentMenu():
 		selected = 1
 		delayTime = 0.5
 
+	def updateCursor(self, lcd):
+		if self.selected = 1:
+			lcd.setCursor(0,0)
+		elif self.selected = 2:
+			lcd.setCursor(1,0)
+
 	def getInstrumentInput(self, lcd):
 		lcd.clear()
-		lcd.message(instrumentSelection)
+		lcd.message(self.instrumentSelection)
 		lcd.blink()
+		lcd.setCursor(0,0)
 
 	"""	while True:
 		    # Move left
