@@ -14,6 +14,10 @@ class InstrumentMenu():
 	selected = 1
 	delayTime = 0.5      # The time it takes to look for another button press
 
+	def __init__(self):
+		selected = 1
+		delayTime = 0.5
+
 	def getInstrumentInput(self, lcd):
 		lcd.clear()
 		lcd.message(instrumentSelection)
