@@ -15,7 +15,7 @@ class InstrumentMenu():
 	delayTime = 0.5      # The time it takes to look for another button press
 
 	def __init__(self):
-		selected = 1
+		selected = Instrument.drums
 		delayTime = 0.5
 
 	def updateCursor(self, lcd):
