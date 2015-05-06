@@ -22,11 +22,11 @@ class InstrumentMenu():
 		if self.selected == Instrument.drums:
 			lcd.setCursor(0,0)
 		elif self.selected == Instrument.guitar:
-			lcd.setCursor(1,0)
+			lcd.setCursor(0,1)
 		elif self.selected == Instrument.bass:
-			lcd.setCursor(0, 9)
+			lcd.setCursor(9,0)
 		else:
-			lcd.setCursor(1,9)
+			lcd.setCursor(9,1)
 
 	def getInstrumentInput(self, lcd):
 		lcd.clear()
@@ -68,4 +68,4 @@ class InstrumentMenu():
 			# Select the current entry
 			elif lcd.buttonPressed(lcd.SELECT):
 		    		lcd.blink()
-		    	return self.selected
+		    		return self.selected
