@@ -19,7 +19,7 @@ class InstrumentMenu():
 		lcd.message(instrumentSelection)
 		lcd.blink()
 
-		while True:
+	"""	while True:
 		    # Move left
 		    if lcd.buttonPressed(lcd.LEFT):
 		    	if self.selected = Instrument.bass:
@@ -52,4 +52,4 @@ class InstrumentMenu():
 		    # Select the current entry
 		    elif lcd.buttonPressed(lcd.SELECT):
 		    	lcd.blink()
-		    	return selected
+		    	return selected"""
