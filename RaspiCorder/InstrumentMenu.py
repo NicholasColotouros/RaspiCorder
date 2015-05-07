@@ -9,6 +9,17 @@ class Instrument:
   bass = 3
   other = 4
 
+  def name(num):
+  	if num == 1:
+  		return "drums"
+  	elif num == 2:
+  		return "guitar"
+  	elif num == 3:
+  		return "bass"
+  	else:
+  		return "other"
+
+
 class InstrumentMenu():
 	instrumentSelection = " Drums     Bass\n Guitar    Other"
 	selected = 1
