@@ -9,7 +9,8 @@ class Instrument:
   bass = 3
   other = 4
 
-  def name(num):
+  @staticmethod
+  def instrumentName(num):
   	if num == 1:
   		return "drums"
   	elif num == 2:
@@ -20,7 +21,7 @@ class Instrument:
   		return "other"
 
 
-class InstrumentMenu():
+class InstrumentMenu:
 	instrumentSelection = " Drums     Bass\n Guitar    Other"
 	selected = 1
 	delayTime = 0.5      # The time it takes to look for another button press
