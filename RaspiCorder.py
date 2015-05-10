@@ -5,6 +5,8 @@ from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 
 from RaspiCorder import Menus
 
+sleepTime = 0.25
+
 # Initialization of the plate
 lcd = Adafruit_CharLCDPlate.Adafruit_CharLCDPlate()
 lcd.begin(16,2)
@@ -30,10 +32,10 @@ def RecConfirm(instName):
 while True:
 	inst = instrumentInput()
 	instName = Menus.Instrument.instrumentName(inst)
-	sleep(0.25)
+	sleep(sleepTime)
 
 	beginRecording = RecConfirm(instName)
-	sleep(0.25)
+	sleep(sleepTime)
 
 	if not beginRecording:
 		continue

@@ -26,7 +26,7 @@ class ConfirmationMenu():
 	lcd = None
 
 	def __init__(self, plcd, instrument):
-		self.menuText = " START REC  " + instrument + "\nReselect instr"
+		self.menuText = " START REC " + instrument + "\n RESELECT instr"
 		self.lcd = plcd
 		self.selected = 0
 
