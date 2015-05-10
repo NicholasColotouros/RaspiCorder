@@ -30,8 +30,10 @@ def RecConfirm(instName):
 while True:
 	inst = instrumentInput()
 	instName = Menus.Instrument.instrumentName(inst)
+	sleep(0.25)
 
 	beginRecording = RecConfirm(instName)
+	sleep(0.25)
 
 	if not beginRecording:
 		continue
