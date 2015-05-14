@@ -20,7 +20,7 @@ class Instrument:
   	else:
   		return "other"
 
-class ConfirmationMenu():
+class ConfirmationMenu:
 	menuText = None
 	selected = None
 	lcd = None

@@ -4,6 +4,7 @@ from time import sleep
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 
 from RaspiCorder import Menus
+from RaspiCorder import Recorder
 
 sleepTime = 0.25
 
@@ -22,11 +23,16 @@ def instrumentInput():
 	lcd.clear()
 	return instSelection
 
-def RecConfirm(instName):
+def recConfirm(instName):
 	recmenu = Menus.ConfirmationMenu(lcd, instName)
 	recSelect = recmenu.InstrumentConfirm()
 	lcd.clear()
 	return recSelect
+
+def record(instName):
+	rec = Recorder.Recorder(instName)
+	rec.record()
+
 
 # Menu logic
 while True:
@@ -34,11 +40,16 @@ while True:
 	instName = Menus.Instrument.instrumentName(inst)
 	sleep(sleepTime)
 
-	beginRecording = RecConfirm(instName)
+	beginRecording = recConfirm(instName)
 	sleep(sleepTime)
 
 	if not beginRecording:
 		continue
 
-	# TODO: begin recording
-
+	lcd.clear()
+	lcd.message("recording...")
+	record(instName)
+	lcd.clear()
+	lcd.message("recording complete")
+	sleep(sleepTime * 4)
+	lcd.clear()
